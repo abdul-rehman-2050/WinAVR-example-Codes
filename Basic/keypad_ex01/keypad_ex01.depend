@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1381581422 source:c:\documents and settings\user\my documents\avr_examples\keypad_ex01\keypad_ex01\fuse.c
+	<avr/io.h>
+
