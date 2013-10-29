@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1382184036 source:c:\documents and settings\user\my documents\avr_examples\usart_ex01\fuse.c
+	<avr/io.h>
+
+1382315074 source:c:\documents and settings\user\my documents\avr_examples\usart_ex01\main.c
+	<avr/io.h>
+	<util/delay.h>
+	"usart.h"
+
+1382315118 c:\documents and settings\user\my documents\avr_examples\usart_ex01\usart.h
+
