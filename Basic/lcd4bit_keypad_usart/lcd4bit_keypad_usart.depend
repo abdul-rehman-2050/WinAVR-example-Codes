@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1382319794 source:c:\documents and settings\user\my documents\avr_examples\keypad_ex01\lcd4bit_keypad_usart\fuse.c
+	<avr/io.h>
+
+1382404510 source:c:\documents and settings\user\my documents\avr_examples\keypad_ex01\lcd4bit_keypad_usart\main.c
+	<avr/io.h>
+	<util/delay.h>
+	"Keypad.h"
+	"Lcd4bit.h"
+	"Usart.h"
+
+1382405050 c:\documents and settings\user\my documents\avr_examples\keypad_ex01\lcd4bit_keypad_usart\keypad.h
+
+1382321626 c:\documents and settings\user\my documents\avr_examples\keypad_ex01\lcd4bit_keypad_usart\lcd4bit.h
+	<avr/io.h>
+
+1382272038 c:\documents and settings\user\my documents\avr_examples\keypad_ex01\lcd4bit_keypad_usart\usart.h
+
