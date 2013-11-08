@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1383843608 source:c:\documents and settings\user\my documents\avr_examples\glcd_ex01\fuse.c
+	<avr/io.h>
+
+1383849294 source:c:\documents and settings\user\my documents\avr_examples\glcd_ex01\ks0108.c
+	<inttypes.h>
+	<avr/io.h>
+	<avr/pgmspace.h>
+	"ks0108.h"
+
+1383849920 c:\documents and settings\user\my documents\avr_examples\glcd_ex01\ks0108.h
+	<inttypes.h>
+	<avr/pgmspace.h>
+
+1383849314 source:c:\documents and settings\user\my documents\avr_examples\glcd_ex01\main.c
+	<inttypes.h>
+	<avr/io.h>
+	<avr/pgmspace.h>
+	"ks0108.h"
+	"arial_bold_14.h"
+	"corsiva_12.h"
+
+1107019746 c:\documents and settings\user\my documents\avr_examples\glcd_ex01\arial_bold_14.h
+	<inttypes.h>
+	<avr/pgmspace.h>
+
+1107020874 c:\documents and settings\user\my documents\avr_examples\glcd_ex01\corsiva_12.h
+	<inttypes.h>
+	<avr/pgmspace.h>
+
