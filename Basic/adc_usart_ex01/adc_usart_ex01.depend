@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1383959660 source:c:\documents and settings\user\my documents\avr_examples\adc_usart_ex01\fuse.c
+	<avr/io.h>
+
+1383963614 source:c:\documents and settings\user\my documents\avr_examples\adc_usart_ex01\main.c
+	<avr/io.h>
+	<util/delay.h>
+	"Usart.h"
+	"ADC.h"
+
+1383962142 c:\documents and settings\user\my documents\avr_examples\adc_usart_ex01\usart.h
+
+1383963974 c:\documents and settings\user\my documents\avr_examples\adc_usart_ex01\adc.h
+
