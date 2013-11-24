@@ -1,0 +1,52 @@
+
+
+
+
+//===============================================================================
+//  Initializing the Analog to Digital Converter (ADC).
+//===============================================================================
+
+void ADC_init (void)
+{
+	DDRA = 0;               //MAKE PORT AN INPUT PORT
+	// AREF = AVcc
+    ADMUX = (1<<REFS0);
+
+    // ADC Enable and prescaler of 128
+    // 16000000/128 = 125000
+    ADCSRA = (1<<ADEN)|(1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);
+}
+
+//================================================================
+
+uint16_t adc_read_2(uint8_t ch)
+{
+  // select the corresponding channel 0~7
+  // ANDing with ’7′ will always keep the value
+  // of ‘ch’ between 0 and 7
+  ch &= 0b00000111;  // AND operation with 7
+  ADMUX = (ADMUX & 0xF8)|ch; // clears the bottom 3 bits before ORing
+
+  // start single convertion
+  // write ’1′ to ADSC
+  ADCSRA |= (1<<ADSC);
+
+  // wait for conversion to complete
+  // ADSC becomes ’0′ again
+  // till then, run loop continuously
+  while(ADCSRA & (1<<ADSC));
+
+  return (ADC);
+}
+
+
+void hex2Ascii(unsigned int data, unsigned char *Buffer)
+{
+	Buffer[3] = ((data/1000)+0x30);
+	data %= 1000;
+	Buffer[2]  = ((data/100)+0x30);
+	data %= 100;
+	Buffer[1]  = ((data/10)+0x30);
+	Buffer[0]  = ((data%10)+0x30);
+}
+

@@ -1,0 +1,516 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              obj\Release\main.o (__udivmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                              obj\Release\ks0108.o (__divmodhi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              obj\Release\ks0108.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+ks0108FontColor     0x1               obj\Release\ks0108.o
+ks0108Coord         0x3               obj\Release\ks0108.o
+ks0108FontRead      0x2               obj\Release\ks0108.o
+ks0108Font          0x2               obj\Release\ks0108.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+LOAD obj\Release\fuse.o
+LOAD obj\Release\ks0108.o
+LOAD obj\Release\main.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x1e7c
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x00000054      0xe02 obj\Release\main.o
+                0x00000e56                . = ALIGN (0x2)
+                0x00000e56                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000e56        0x0 linker stubs
+ *(.trampolines*)
+                0x00000e56                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000e56                __ctors_start = .
+ *(.ctors)
+                0x00000e56                __ctors_end = .
+                0x00000e56                __dtors_start = .
+ *(.dtors)
+                0x00000e56                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000e56        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000e56                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000e56        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000e62       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000e62                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000e72        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ *(.init9)
+ *(.text)
+ .text          0x00000e7a        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+                0x00000e7a                __vector_1
+                0x00000e7a                __vector_12
+                0x00000e7a                __bad_interrupt
+                0x00000e7a                __vector_6
+                0x00000e7a                __vector_3
+                0x00000e7a                __vector_11
+                0x00000e7a                __vector_13
+                0x00000e7a                __vector_17
+                0x00000e7a                __vector_19
+                0x00000e7a                __vector_7
+                0x00000e7a                __vector_5
+                0x00000e7a                __vector_4
+                0x00000e7a                __vector_9
+                0x00000e7a                __vector_2
+                0x00000e7a                __vector_15
+                0x00000e7a                __vector_8
+                0x00000e7a                __vector_14
+                0x00000e7a                __vector_10
+                0x00000e7a                __vector_16
+                0x00000e7a                __vector_18
+                0x00000e7a                __vector_20
+ .text          0x00000e7e        0x0 obj\Release\fuse.o
+ .text          0x00000e7e      0xcc6 obj\Release\ks0108.o
+                0x00000fce                ks0108GotoXY
+                0x000013ca                ks0108Puts
+                0x00001584                ks0108SetInverted
+                0x00001018                ks0108DoReadData
+                0x00000e7e                ks0108ReadFontData
+                0x000018c6                ks0108DrawRect
+                0x0000109c                ks0108WriteData
+                0x00000f46                ks0108StringWidth_P
+                0x000015a4                ks0108FillRect
+                0x00001186                ks0108PutChar
+                0x0000146a                ks0108InvertRect
+                0x000016c0                ks0108Init
+                0x00001710                ks0108DrawRoundRect
+                0x00000e9a                ks0108CharWidth
+                0x00000fa8                ks0108WriteCommand
+                0x0000108e                ks0108ReadData
+                0x00000f16                ks0108StringWidth
+                0x00000e84                ks0108SelectFont
+                0x00001418                ks0108SetDot
+                0x00000f7a                ks0108Enable
+                0x0000137a                ks0108Puts_P
+                0x00001916                ks0108DrawLine
+ .text          0x00001b44      0x2e6 obj\Release\main.o
+                0x00001cb4                print_heart_rate
+                0x00001cf0                recreate_scope_screen
+                0x00001b50                adc_read_2
+                0x00001c14                createRaster2
+                0x00001d78                draw_samples
+                0x00001c50                Welcome_Screen
+                0x00001b44                ADC_init
+                0x00001b68                hex2Ascii
+                0x00001dac                main
+                0x00001bb8                collect_samples
+                0x00001d56                clear_scope
+ .text          0x00001e2a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00001e2a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x00001e2a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00001e2a        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00001e2a                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00001e2a       0x28 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00001e2a                __udivmodhi4
+ .text.libgcc   0x00001e52       0x26 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00001e52                __divmodhi4
+                0x00001e52                _div
+ .text.libgcc   0x00001e78        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00001e78        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00001e78                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00001e78        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00001e78                exit
+                0x00001e78                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00001e78        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00001e7c                _etext = .
+
+.data           0x00800060        0x0 load address 0x00001e7c
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .data          0x00800060        0x0 obj\Release\fuse.o
+ .data          0x00800060        0x0 obj\Release\ks0108.o
+ .data          0x00800060        0x0 obj\Release\main.o
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800060                . = ALIGN (0x2)
+                0x00800060                _edata = .
+                0x00800060                PROVIDE (__data_end, .)
+
+.bss            0x00800060       0x34
+                0x00800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x00800060        0x0 obj\Release\fuse.o
+ .bss           0x00800060        0x1 obj\Release\ks0108.o
+                0x00800060                ks0108Inverted
+ .bss           0x00800061       0x2b obj\Release\main.o
+                0x00800061                adc_result
+                0x00800069                samples
+                0x00800065                Buffer
+                0x00800063                pre_adc_result
+ .bss           0x0080008c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x0080008c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x0080008c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080008c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080008c        0x8 obj\Release\ks0108.o
+                0x0080008c                ks0108FontColor
+                0x0080008d                ks0108Coord
+                0x00800090                ks0108FontRead
+                0x00800092                ks0108Font
+                0x00800094                PROVIDE (__bss_end, .)
+                0x00001e7c                __data_load_start = LOADADDR (.data)
+                0x00001e7c                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800094        0x0
+                0x00800094                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00800094                PROVIDE (__noinit_end, .)
+                0x00800094                _end = .
+                0x00800094                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse           0x00820000        0x2
+ *(.fuse)
+ .fuse          0x00820000        0x2 obj\Release\fuse.o
+                0x00820000                __fuse
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(bin\Release\osciloscope_ex01.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+ADC_init                                          obj\Release\main.o
+Buffer                                            obj\Release\main.o
+Welcome_Screen                                    obj\Release\main.o
+__bad_interrupt                                   c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__bss_end                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__divmodhi4                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  obj\Release\ks0108.o
+__do_clear_bss                                    c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  obj\Release\main.o
+                                                  obj\Release\ks0108.o
+__fuse                                            obj\Release\fuse.o
+__heap_end                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__init                                            c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__stack                                           c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__udivmodhi4                                      c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  obj\Release\main.o
+__vector_1                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_10                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_11                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_12                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_13                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_14                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_15                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_16                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_17                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_18                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_19                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_2                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_20                                       c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_3                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_4                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_5                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_6                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_7                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_8                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_9                                        c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vector_default                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+__vectors                                         c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+_div                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+_exit                                             c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+adc_read_2                                        obj\Release\main.o
+adc_result                                        obj\Release\main.o
+clear_scope                                       obj\Release\main.o
+collect_samples                                   obj\Release\main.o
+createRaster2                                     obj\Release\main.o
+draw_samples                                      obj\Release\main.o
+exit                                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+hex2Ascii                                         obj\Release\main.o
+ks0108CharWidth                                   obj\Release\ks0108.o
+ks0108Coord                                       obj\Release\ks0108.o
+ks0108DoReadData                                  obj\Release\ks0108.o
+ks0108DrawLine                                    obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108DrawRect                                    obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108DrawRoundRect                               obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108Enable                                      obj\Release\ks0108.o
+ks0108FillRect                                    obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108Font                                        obj\Release\ks0108.o
+ks0108FontColor                                   obj\Release\ks0108.o
+ks0108FontRead                                    obj\Release\ks0108.o
+ks0108GotoXY                                      obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108Init                                        obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108InvertRect                                  obj\Release\ks0108.o
+ks0108Inverted                                    obj\Release\ks0108.o
+ks0108PutChar                                     obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108Puts                                        obj\Release\ks0108.o
+ks0108Puts_P                                      obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108ReadData                                    obj\Release\ks0108.o
+ks0108ReadFontData                                obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108SelectFont                                  obj\Release\ks0108.o
+                                                  obj\Release\main.o
+ks0108SetDot                                      obj\Release\ks0108.o
+ks0108SetInverted                                 obj\Release\ks0108.o
+ks0108StringWidth                                 obj\Release\ks0108.o
+ks0108StringWidth_P                               obj\Release\ks0108.o
+ks0108WriteCommand                                obj\Release\ks0108.o
+ks0108WriteData                                   obj\Release\ks0108.o
+                                                  obj\Release\main.o
+main                                              obj\Release\main.o
+                                                  c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+pre_adc_result                                    obj\Release\main.o
+print_heart_rate                                  obj\Release\main.o
+recreate_scope_screen                             obj\Release\main.o
+samples                                           obj\Release\main.o
