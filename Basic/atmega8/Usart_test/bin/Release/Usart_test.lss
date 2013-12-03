@@ -1,0 +1,157 @@
+
+bin\Release\Usart_test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000f0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000028  00800060  000000f0  00000164  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	12 c0       	rjmp	.+36     	; 0x26 <__ctors_end>
+   2:	24 c0       	rjmp	.+72     	; 0x4c <__bad_interrupt>
+   4:	23 c0       	rjmp	.+70     	; 0x4c <__bad_interrupt>
+   6:	22 c0       	rjmp	.+68     	; 0x4c <__bad_interrupt>
+   8:	21 c0       	rjmp	.+66     	; 0x4c <__bad_interrupt>
+   a:	20 c0       	rjmp	.+64     	; 0x4c <__bad_interrupt>
+   c:	1f c0       	rjmp	.+62     	; 0x4c <__bad_interrupt>
+   e:	1e c0       	rjmp	.+60     	; 0x4c <__bad_interrupt>
+  10:	1d c0       	rjmp	.+58     	; 0x4c <__bad_interrupt>
+  12:	1c c0       	rjmp	.+56     	; 0x4c <__bad_interrupt>
+  14:	1b c0       	rjmp	.+54     	; 0x4c <__bad_interrupt>
+  16:	1a c0       	rjmp	.+52     	; 0x4c <__bad_interrupt>
+  18:	19 c0       	rjmp	.+50     	; 0x4c <__bad_interrupt>
+  1a:	18 c0       	rjmp	.+48     	; 0x4c <__bad_interrupt>
+  1c:	17 c0       	rjmp	.+46     	; 0x4c <__bad_interrupt>
+  1e:	16 c0       	rjmp	.+44     	; 0x4c <__bad_interrupt>
+  20:	15 c0       	rjmp	.+42     	; 0x4c <__bad_interrupt>
+  22:	14 c0       	rjmp	.+40     	; 0x4c <__bad_interrupt>
+  24:	13 c0       	rjmp	.+38     	; 0x4c <__bad_interrupt>
+
+00000026 <__ctors_end>:
+  26:	11 24       	eor	r1, r1
+  28:	1f be       	out	0x3f, r1	; 63
+  2a:	cf e5       	ldi	r28, 0x5F	; 95
+  2c:	d4 e0       	ldi	r29, 0x04	; 4
+  2e:	de bf       	out	0x3e, r29	; 62
+  30:	cd bf       	out	0x3d, r28	; 61
+
+00000032 <__do_copy_data>:
+  32:	10 e0       	ldi	r17, 0x00	; 0
+  34:	a0 e6       	ldi	r26, 0x60	; 96
+  36:	b0 e0       	ldi	r27, 0x00	; 0
+  38:	e0 ef       	ldi	r30, 0xF0	; 240
+  3a:	f0 e0       	ldi	r31, 0x00	; 0
+  3c:	02 c0       	rjmp	.+4      	; 0x42 <.do_copy_data_start>
+
+0000003e <.do_copy_data_loop>:
+  3e:	05 90       	lpm	r0, Z+
+  40:	0d 92       	st	X+, r0
+
+00000042 <.do_copy_data_start>:
+  42:	a8 38       	cpi	r26, 0x88	; 136
+  44:	b1 07       	cpc	r27, r17
+  46:	d9 f7       	brne	.-10     	; 0x3e <.do_copy_data_loop>
+  48:	1c d0       	rcall	.+56     	; 0x82 <main>
+  4a:	50 c0       	rjmp	.+160    	; 0xec <_exit>
+
+0000004c <__bad_interrupt>:
+  4c:	d9 cf       	rjmp	.-78     	; 0x0 <__vectors>
+
+0000004e <Usart_init>:
+  4e:	10 bc       	out	0x20, r1	; 32
+  50:	8c e0       	ldi	r24, 0x0C	; 12
+  52:	89 b9       	out	0x09, r24	; 9
+  54:	88 e1       	ldi	r24, 0x18	; 24
+  56:	8a b9       	out	0x0a, r24	; 10
+  58:	86 e8       	ldi	r24, 0x86	; 134
+  5a:	80 bd       	out	0x20, r24	; 32
+  5c:	08 95       	ret
+
+0000005e <Usart_getch>:
+  5e:	5f 9b       	sbis	0x0b, 7	; 11
+  60:	fe cf       	rjmp	.-4      	; 0x5e <Usart_getch>
+  62:	8c b1       	in	r24, 0x0c	; 12
+  64:	08 95       	ret
+
+00000066 <Usart_putch>:
+  66:	5d 9b       	sbis	0x0b, 5	; 11
+  68:	fe cf       	rjmp	.-4      	; 0x66 <Usart_putch>
+  6a:	8c b9       	out	0x0c, r24	; 12
+  6c:	08 95       	ret
+
+0000006e <Usart_printf>:
+  6e:	fc 01       	movw	r30, r24
+  70:	04 c0       	rjmp	.+8      	; 0x7a <Usart_printf+0xc>
+  72:	5d 9b       	sbis	0x0b, 5	; 11
+  74:	fe cf       	rjmp	.-4      	; 0x72 <Usart_printf+0x4>
+  76:	8c b9       	out	0x0c, r24	; 12
+  78:	31 96       	adiw	r30, 0x01	; 1
+  7a:	80 81       	ld	r24, Z
+  7c:	88 23       	and	r24, r24
+  7e:	c9 f7       	brne	.-14     	; 0x72 <Usart_printf+0x4>
+  80:	08 95       	ret
+
+00000082 <main>:
+  82:	8f ef       	ldi	r24, 0xFF	; 255
+  84:	87 bb       	out	0x17, r24	; 23
+  86:	10 bc       	out	0x20, r1	; 32
+  88:	8c e0       	ldi	r24, 0x0C	; 12
+  8a:	89 b9       	out	0x09, r24	; 9
+  8c:	88 e1       	ldi	r24, 0x18	; 24
+  8e:	8a b9       	out	0x0a, r24	; 10
+  90:	86 e8       	ldi	r24, 0x86	; 134
+  92:	80 bd       	out	0x20, r24	; 32
+  94:	88 ea       	ldi	r24, 0xA8	; 168
+  96:	91 e6       	ldi	r25, 0x61	; 97
+  98:	01 97       	sbiw	r24, 0x01	; 1
+  9a:	f1 f7       	brne	.-4      	; 0x98 <main+0x16>
+  9c:	80 e6       	ldi	r24, 0x60	; 96
+  9e:	90 e0       	ldi	r25, 0x00	; 0
+  a0:	e6 df       	rcall	.-52     	; 0x6e <Usart_printf>
+  a2:	6b e5       	ldi	r22, 0x5B	; 91
+  a4:	5d e5       	ldi	r21, 0x5D	; 93
+  a6:	4c e2       	ldi	r20, 0x2C	; 44
+  a8:	29 e1       	ldi	r18, 0x19	; 25
+  aa:	30 e0       	ldi	r19, 0x00	; 0
+  ac:	5f 9b       	sbis	0x0b, 7	; 11
+  ae:	fe cf       	rjmp	.-4      	; 0xac <main+0x2a>
+  b0:	8c b1       	in	r24, 0x0c	; 12
+  b2:	5d 9b       	sbis	0x0b, 5	; 11
+  b4:	fe cf       	rjmp	.-4      	; 0xb2 <main+0x30>
+  b6:	6c b9       	out	0x0c, r22	; 12
+  b8:	5d 9b       	sbis	0x0b, 5	; 11
+  ba:	fe cf       	rjmp	.-4      	; 0xb8 <main+0x36>
+  bc:	8c b9       	out	0x0c, r24	; 12
+  be:	5d 9b       	sbis	0x0b, 5	; 11
+  c0:	fe cf       	rjmp	.-4      	; 0xbe <main+0x3c>
+  c2:	5c b9       	out	0x0c, r21	; 12
+  c4:	5d 9b       	sbis	0x0b, 5	; 11
+  c6:	fe cf       	rjmp	.-4      	; 0xc4 <main+0x42>
+  c8:	4c b9       	out	0x0c, r20	; 12
+  ca:	c5 9a       	sbi	0x18, 5	; 24
+  cc:	80 e1       	ldi	r24, 0x10	; 16
+  ce:	97 e2       	ldi	r25, 0x27	; 39
+  d0:	f9 01       	movw	r30, r18
+  d2:	31 97       	sbiw	r30, 0x01	; 1
+  d4:	f1 f7       	brne	.-4      	; 0xd2 <main+0x50>
+  d6:	01 97       	sbiw	r24, 0x01	; 1
+  d8:	d9 f7       	brne	.-10     	; 0xd0 <main+0x4e>
+  da:	c5 98       	cbi	0x18, 5	; 24
+  dc:	80 e1       	ldi	r24, 0x10	; 16
+  de:	97 e2       	ldi	r25, 0x27	; 39
+  e0:	f9 01       	movw	r30, r18
+  e2:	31 97       	sbiw	r30, 0x01	; 1
+  e4:	f1 f7       	brne	.-4      	; 0xe2 <main+0x60>
+  e6:	01 97       	sbiw	r24, 0x01	; 1
+  e8:	d9 f7       	brne	.-10     	; 0xe0 <main+0x5e>
+  ea:	e0 cf       	rjmp	.-64     	; 0xac <main+0x2a>
+
+000000ec <_exit>:
+  ec:	f8 94       	cli
+
+000000ee <__stop_program>:
+  ee:	ff cf       	rjmp	.-2      	; 0xee <__stop_program>
