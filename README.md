@@ -6,3 +6,7 @@ This includes Basic WinAVR examples on Atmega32, ATmega8 and ATmega328p microcon
 - ADC
 - LCD interfacing
 - Uart interfacing 
+- Graphics LCD
+- 4x4 Keypad interfacing
+- Timer modules usage
+- Oscilloscope example
